@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap");
+
+body {
+    padding: 1;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh; /* Full screen height */
+    font-family: "Golos Text";
+    background-color: #5c3d7028;
+}
+
+.title {
+    color: #e5e0e8;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.term-pool {
+    flex: 1; /* Takes up the left third */
+    padding: 1rem; /* Padding for aesthetics */
+    height: 95%; /* Full height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #1e1028;
+    border-radius: 5px;
+    box-shadow: 10px 15px 20px #1e192844;
+}
+
+.draggable-container {
+    padding: 3rem;
+    margin: 0.5rem 0.5rem;
+    width: 90%; /* Use full width */
+    border-radius: 15px;
+    box-shadow: 10px 15px 20px #1e192844;
+    background-color: #1e1028;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container {
+    flex: 2; /* Takes up the remaining space */
+    display: flex;
+    flex-direction: column; /* Stack the other two containers vertically */
+    justify-content: flex-start; /* Align to the top */
+}
+
+.group-container {
+    display: inline-block; /* Use flexbox layout for groups */
+    flex-direction: column; /* Arrange groups vertically */
+    justify-content: start; /* Align items to the top */
+    width: 90%; /* Ensure full width */
+    align-items: stretch; /* Allow groups to stretch full width */
+    margin-bottom: 2px; /* Space between group containers */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0px; /* Padding inside the container */
+}
+
+.group {
+    background-color: #1e1028;
+    padding: 1rem;
+    border-radius: 5px;
+    display: block;
+    margin: 0.5rem 0; /* Space between groups */
+    min-height: 100px;
+}
+
+.source-pool {
+    background-color: #1e1028;
+    padding: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    grid-template-columns: repeat(1, 1fr); /* single column */
+    gap: 10px; /* Space between items */
+    margin: 0 5px;
+    min-height: 100px;
+    width: 100%; /* Full width */
+}
+
+.shallow-draggable {
+    background-color: #f1edf3;
+    color: #29262b;
+    padding: 0.3rem;
+    margin: 0.5rem 0.1rem;
+    border-radius: 25px;
+    transition: opacity 200ms ease;
+    cursor: grab;
+    white-space: nowrap;
+    display: inline-block; /* Keep it inline-block for dynamic sizing */
+    cursor: pointer; /* Pointer cursor for draggable items */
+}
+
+.shallow-draggable:hover {
+    background-color: #A0C4FF; /* Highlight on hover */
+}
+
+.dragging {
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+.used {
+    background-color: #f1edf3; /* Change color when used in a group */
+    opacity: 0.5; /* 50% transparency */
+}
+
+input.title-input {
+    background-color: #1e1028;
+    color: #e5e0e8;
+    border: none;
+    border-bottom: 1px solid #e5e0e8;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+input.title-input:focus {
+    outline: none;
+}
+
+.checkbox-container {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #e5e0e8;
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjusted to use full width */
+    flex-wrap: wrap; /* Allow wrapping for better layout */
+}
+
+.checkbox-column {
+    display: inline-block;
+    margin-top: 2px;
+    width: 48%; /* Set width for two columns */
+}
+
+.group-title {
+    color: #e5e0e8;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.add-terms-container {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #f1edf3;
+    color: #29262b;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d1edf3;
+    display: inline;
+}
+
+.source-pool {
+    margin: 10px;
+}
+
+.group-container h3 {
+    margin: 0 0 10px; /* Space between the title and terms */
+    font-size: 1.2em; /* Slightly larger font for the title */
+    color: #e5e0e8;
+}
+

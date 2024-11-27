@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DwC Picker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body>
+    <div class="term-pool">
+        <h1 class="title">Term Pool</h1>
+        <div class="source-pool"></div>
+    </div>
+
+    <div class="content-container">
+        <div class="draggable-container">
+            <h1 class="title">Select Darwin Core Terms to Load into the Term Pool</h1>
+            <div class="checkbox-container">
+                <div class="checkbox-column">
+                    <h2 class="title">Core</h2>
+                    <label><input type="checkbox" value="event_core_list"> Event Core</label><br>
+                    <label><input type="checkbox" value="occurrence_core_list"> Occurrence Core</label><br>
+                    <label><input type="checkbox" value="taxon_core_list"> Taxon Core</label><br>
+                </div>
+                <div class="checkbox-column">
+                    <h2 class="title">Extension</h2>
+                    <label><input type="checkbox" value="dna_derived_data"> DNA Derived Data</label><br>
+                    <label><input type="checkbox" value="audiovisual"> Audiovisual</label><br>
+                    <label><input type="checkbox" value="humboldt"> Humboldt</label><br>
+                    <label><input type="checkbox" value="dwc_occurrence"> Occurrence</label><br>
+                    <label><input type="checkbox" value="identification_history"> Identification History</label><br>
+                    <label><input type="checkbox" value="extended_measurement_or_fact"> Extended Measurement or Fact</label><br>
+                    <label><input type="checkbox" value="resource_relationship"> Resource Relationship</label><br>
+                </div>
+                <div class="checkbox-column">
+                    <button id="loadCsvButton">Load Selected Terms</button>
+                    <div class="add-terms-container">
+                        <button id="addGbifTermsButton">Add Required GBIF/OBIS Terms to Core Table</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="draggable-container">
+            <div class="group-container">
+                <div class="group">
+                    <input type="text" class="title-input" value="Core Table" />
+                </div>
+                <div class="group">
+                    <input type="text" class="title-input" value="Extension Table 1" />
+                </div>
+                <div class="group">
+                    <input type="text" class="title-input" value="Extension Table 2" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+</body>
+</html>
